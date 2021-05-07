@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import FirebaseAnalytics
+
+final class AnaliticsManager {
+    static let shared = AnaliticsManager()
+    private init() {}
+    
+    func logEvent() {
+        Analytics.logEvent("", parameters: [:])
+    }
+}
